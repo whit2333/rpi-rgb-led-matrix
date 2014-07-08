@@ -12,5 +12,8 @@ main.o: led-matrix.h
 led-matrix : $(OBJECTS)
 	$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
 
+install : led-matrix
+	cp led-matrix $(HOME)/bin/.
+
 clean:
 	rm -f $(OBJECTS) $(BINARIES)

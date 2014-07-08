@@ -175,6 +175,7 @@ public:
     line = ReadLine(f, header_buf, sizeof(header_buf));
     if (!line || sscanf(line, "%d %d ", &width_, &height_) != 2)
       EXIT_WITH_MSG("Width/height expected");
+    //printf("%d x %d", width_,height_ );
     int value;
     line = ReadLine(f, header_buf, sizeof(header_buf));
     if (!line || sscanf(line, "%d ", &value) != 1 || value != 255)
@@ -201,13 +202,13 @@ public:
         usleep(100 * 1000);
         continue;
       }
-      usleep(30 * 1000);
+      usleep(80 * 1000);
       for (int x = 0; x < screen_width; ++x) {
         for (int y = 0; y < screen_height; ++y) {
           const Pixel &p = getPixel((horizontal_position_ + x) % width_, y);
           // Display upside down on my desk. Lets flip :)
-          int disp_x = screen_width - x;
-          int disp_y = screen_height - y;
+          int disp_x = screen_width - x  - 1 ;
+          int disp_y = screen_height - y - 1;
           matrix_->SetPixel(disp_x, disp_y, p.red, p.green, p.blue);
         }
       }
