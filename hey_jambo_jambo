@@ -1,0 +1,9 @@
+#!/bin/bash
+
+sudo ./flash -t 600 -i ~/ppm/Flash_hey.ppm 
+sudo ./flash -t 150 -i ~/ppm/Flash_jam.ppm 
+sudo ./scroll -t 150 -i ~/ppm/Flash_bo.ppm 
+sudo ./flash -t 150 -i ~/ppm/Flash_jam.ppm 
+sudo ./scroll -t 150 -i ~/ppm/Flash_bo.ppm 
+
+#sudo ./flash -t 1000 -i ~/ppm/Flash_jam.ppm 

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+sudo ./flash -t 400 -i ~/ppm/Flash_all.ppm 
+sudo ./flash -t 400 -i ~/ppm/Flash_night.ppm 
+sudo ./flash -t 400 -i ~/ppm/Flash_long.ppm 
+
+sudo ./flash -t 300 -i ~/ppm/moustache_red.ppm 
+
+sudo ./flash -t 200 -i ~/ppm/Flash_all.ppm 
+sudo ./flash -t 200 -i ~/ppm/Flash_night.ppm 
+sudo ./flash -t 1900 -i ~/ppm/moustache_red.ppm 
+
+sudo ./flash -t 400 -i ~/ppm/Flash_all.ppm 
+sudo ./flash -t 400 -i ~/ppm/Flash_night.ppm 
+sudo ./flash -t 400 -i ~/ppm/Flash_long.ppm 
+sudo ./flash -t 400 -i ~/ppm/moustache_red.ppm 
+
+#sudo ./flash -t 1000 -i ~/ppm/Flash_jam.ppm 

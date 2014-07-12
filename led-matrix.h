@@ -13,7 +13,7 @@ class RGBMatrix {
   void ClearScreen();
 
   // Here the set-up  [>] - Only one 16x32 panel
-  int width() const { return 64; }
+  int width() const { return 128; }
   int height() const { return 16; }
   void SetPixel(uint8_t x, uint8_t y,
                 uint8_t red, uint8_t green, uint8_t blue);
@@ -28,9 +28,9 @@ private:
 
   enum {
     kDoubleRows = 8,     // Physical constant of the used board.
-    kChainedBoards = 2,   // Number of boards that are daisy-chained.
+    kChainedBoards = 4,   // Number of boards that are daisy-chained.
     kColumns = kChainedBoards * 32,
-    kPWMBits = 4          // maximum PWM resolution.
+    kPWMBits = 7          // maximum PWM resolution.
   };
 
   union IoBits {
